@@ -1,6 +1,39 @@
 # example-app-nodejs-backend-react-frontend
+Building an example-app-nodejs-backend-react-frontend microservices application.
 
-> This is an example app created for the blog post '[What is a good directory structure for a monorepo with a Node.js back end and React front end?](https://simonplend.com/what-is-a-good-directory-structure-for-a-monorepo-with-a-node-js-back-end-and-react-front-end/)'.
+
+By Creating Instances in AWS cloud.
+Jenkins master (t2.large)
+Installed jenkins and configured the all necessary plugins
+K8s master (t2.medium)
+Install kubeadm
+K8s node (t2.medium)
+Install kubeadm both master and node.
+configured in jenkins,
+Prometheus and Graphana (t2.medium)
+Step-1: Jenkins master installed jenkins in it.
+
+
+
+Jenkins: install plugins nodejs, Eclipse Temurin Installer
+
+
+Installed docker on host machine.
+
+     
+step-2) Run the sonar container after that login to sonar by taking credentials
+install plugin SonarQube Scanner
+docker run -d --name sonar -p 9000:9000 sonarqube:lts-community (created container in jenkins master)
+
+step-3) Configured the webhook to sonar to the jenkins and
+Created project examplenodejs in sonar and webhook configuration to jenkins
+step-4) Created kubenetes cluster by installing kubeadm both master and node..setup cluster up.
+step-5) created jenkinsfile
+step-6) created Dockefile
+step-7) Created Kubernetes Deployment.yaml and service.yaml files
+step-8) created terraform scripts for creating jenkins by IAC.
+and installed Prometheus and Graphana and configured in Jenkins.
+
 
 ## Requirements
 
